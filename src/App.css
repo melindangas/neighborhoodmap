@@ -1,0 +1,124 @@
+body {
+    background: darkgrey;
+}
+.header {
+    position: relative;
+    background: #276149;
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+}
+
+.header .logo {
+    font-size: 25px;
+    color: white;
+}
+.app {
+    height:100%;
+    background: black;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+.row,
+.col-sm-8,
+.col-sm-4 {
+    margin:0;
+    padding:0;
+}
+
+.map {
+    width: 100%;
+    height: calc(100vh - 60px);
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;;
+    display: block;
+    position: relative;
+}
+
+.sidebar {
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;;
+    display: block;
+    position: relative;
+}
+
+.search-box {
+    position: relative;
+}
+.search-box .search{
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;;
+    display: block;
+    position: absolute;
+}
+.search-box .search .form-control{
+    border-radius: 0;
+    height: 40px;
+}
+.list {
+    overflow-y: scroll;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;;
+    display: block;
+    position: absolute;
+    margin-top: 40px; 
+}
+
+.list .item {
+    background: black;
+    color: white;
+    border: solid 1px gray;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.error-message {
+    background: #9b2424;
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+
+@media(max-width: 767px) {
+    .menu {
+        position: absolute;
+        display: block;
+        right: 22px;
+        color: white;
+        font-size: 30px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    
+    .sidebar.show {
+        display: block;
+        position: fixed;
+        margin-top: 60px;
+        z-index: 2;
+    }
+}
